@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // https://leetcode.com/problems/determine-if-two-strings-are-close/description/
+
 class Solution {
 public:
     bool closeStrings(string word1, string word2) {

@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // https://leetcode.com/problems/count-and-say/
+
 class Solution {
 public:
     string countAndSay(int n) {
