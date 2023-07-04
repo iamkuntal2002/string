@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // https : //leetcode.com/problems/largest-number/
-        static bool
-        comp(string s1, string s2)
+static bool comp(string s1, string s2)
 {
     return (s1 + s2) > (s2 + s1);
 }
