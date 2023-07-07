@@ -31,3 +31,30 @@ public:
         return res;
     }
 };
+
+
+ bool valid(vector<vector<int>> &st,int i,int j){
+        for(int k =0;k<26;k++){
+            if(st[i][k]>0 && st[j][k]>0) return false;
+        }
+        return true;
+    }
+    int maxProduct(vector<string>& words) {
+        vector<vector<int>> st(words.size(),vector<int>(26,0));
+        for(int i=0;i<words.size();i++){
+            string s = words[i];
+            for(auto ch : s){
+                st[i][ch-'a']++;
+            }
+        }
+        int ans = 0;
+        for(int i =0;i<words.size();i++){
+            for(int j = i+1;j<words.size();j++){
+                if(valid(st,i,j)){
+                    int pdt = (int)words[i].size() * words[j].size();
+                    ans = max(ans,pdt);
+                }
+            }
+        }
+        return ans;
+    }
